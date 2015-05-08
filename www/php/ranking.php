@@ -34,16 +34,10 @@
 
   if ($result->num_rows > 0) {
     // output data of each row
-    //echo $result;
-    //echo "[";
     while($row = $result->fetch_assoc()) {
-        //echo '{"nome":"' . $row["nome"] . '","pontos":"' . $row["ponto"] . '"}';
-        //echo $row["no"];
-        //echo "1";
         $rows[] = $row;
     }
     print json_encode($rows);
-    //echo "]";
   } else {
       echo 0;
   }

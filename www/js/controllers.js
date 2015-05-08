@@ -2,7 +2,7 @@ var url = "http://localhost:8888/midiasDigitaisSiteV2/www/php/";
 
 angular.module('starter.controllers', [])
 
-
+//Scripts da tala login
 .controller('LoginCtrl', function($scope, $state, $http, Usuario) {
   $scope.login = {};
   $scope.senha = {};
@@ -39,7 +39,7 @@ angular.module('starter.controllers', [])
   }
 
 })
-
+//Scripts da tala home
 .controller('HomeCtrl', function($scope, $http, $state, Usuario) {
   console.log(Usuario.usuario);
   $scope.nome = Usuario.usuario;
@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
     $state.go("login");
   }
 })
-
+//Scripts da tala ranks
 .controller('RanksCtrl', function($scope, $http, $state, Usuario) {
 
   $scope.ranks = {};
@@ -79,7 +79,7 @@ angular.module('starter.controllers', [])
   // }
 })
 
-
+//Scripts da tala cadastro
 .controller('CadastroCtrl', function($scope, $http, $state) {
 
   $scope.nome = {};
