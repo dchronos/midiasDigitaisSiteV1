@@ -53,15 +53,15 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('RanksCtrl', function($scope, $http, $state, Usuario, Chats) {
+.controller('RanksCtrl', function($scope, $http, $state, Usuario) {
 
   $scope.ranks = {};
   $scope.request = $http({
       method: "post",
       url: url + "ranking.php",
       data: {
-        login: "oi",
-        senha: "oi"
+        login: "",
+        senha: ""
       },
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
   });
@@ -123,26 +123,6 @@ angular.module('starter.controllers', [])
     });
   }
 
-})
-
-
-.controller('DashCtrl', function($scope) {})
-
-.controller('ChatsCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  }
-})
-
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
-
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
 })
 
 .factory('Usuario', function () {
