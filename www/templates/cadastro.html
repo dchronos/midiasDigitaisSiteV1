@@ -1,0 +1,37 @@
+<ion-view view-title="Pontos de jogadores">
+  <ion-content class="padding">
+    <!-- <img src="img/mcb_logo.jpg" style="width: 100%;"> -->
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Nome</span>
+        <input type="text" ng-model="nome.text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Data de Nascimento</span>
+        <input type="date" ng-model="dataDeNascimento.text">
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Sexo
+        </div>
+        <select ng-model="genero" ng-options="item as item.name for item in items" ng-change="change(genero)"></select>
+        <!-- <pre>{{genero | json}}</pre> -->
+      </label>
+
+      <label class="item item-input">
+        <span class="input-label" >Login</span>
+        <input type="text" ng-model="login.text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label" >Senha</span>
+        <input type="password" ng-model="senha.text">
+      </label>
+    </div>
+    <button class="button button-block button-positive" ng-click="salvar()">
+      Salvar
+    </button>
+
+    </button>
+  </ion-content>
+</ion-view>
