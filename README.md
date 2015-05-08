@@ -1,7 +1,7 @@
 Trabalho de Midias Digitais
 
 Grupo:
-Luiz Carlos de Carvalho Júnior
+Luiz Carlos de Carvalho Júnior, 
 Daniela Formiga
 
 
